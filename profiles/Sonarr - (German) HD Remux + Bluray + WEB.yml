@@ -1,0 +1,161 @@
+name: Sonarr - (German) HD Remux + Bluray + WEB
+description: "[Profile from TRaSH-Guides.](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles-german-en/)\n\
+  \nGerman Quality Profile that covers:\n- WEBDL: 720p, 1080p\n- WEBRip: 720p, 1080p\n\
+  - Bluray: 720p, 1080p\n- Remux: 1080p\n\nBased on Trash Guide HD Remux + WEB (German)\
+  \ with Bluray added.\n- German / German DL: 0 (Indexer ist deutsch-only, kein Tdarr\
+  \ Re-Download Loop)\n- AV1: -35000 (kein AV1 fuer Sonarr HD)\n- Audio CFs: Trash\
+  \ Guide Scores (TrueHD ATMOS 5000 bis DD 750)\n- HDR/DV blocked for HD profile"
+tags:
+- Sonarr
+upgradesAllowed: true
+minCustomFormatScore: 0
+upgradeUntilScore: 35000
+minScoreIncrement: 1
+custom_formats:
+# --- German Audio (Trash Guide German-EN Scores) ---
+- name: Sonarr - German DL
+  score: 11000
+- name: Sonarr - German DL (undefined)
+  score: 11000
+- name: Sonarr - German
+  score: 10000
+- name: Sonarr - Not German or English
+  score: -35000
+# --- German Resolution Boosters ---
+- name: Sonarr - German 1080p Booster
+  score: 650
+# --- HQ Source Groups (Remux) ---
+- name: Sonarr - German Remux Tier 01
+  score: 4000
+- name: Sonarr - German Remux Tier 02
+  score: 3900
+# --- HQ Source Groups (Bluray - added for combo profile) ---
+- name: Sonarr - German Bluray Tier 01
+  score: 2900
+- name: Sonarr - German Bluray Tier 02
+  score: 2650
+- name: Sonarr - German Bluray Tier 03
+  score: 2300
+# --- HQ Source Groups (Web) ---
+- name: Sonarr - German Web Tier 01
+  score: 2100
+- name: Sonarr - German Web Tier 02
+  score: 1900
+- name: Sonarr - German Web Tier 03
+  score: 1800
+# --- HQ Source Groups (English Bluray - added for combo profile) ---
+- name: Sonarr - HD Bluray Tier 01
+  score: 1800
+- name: Sonarr - HD Bluray Tier 02
+  score: 1750
+- name: Sonarr - HD Bluray Tier 03
+  score: 1700
+# --- HQ Source Groups (English Remux) ---
+- name: Sonarr - Remux Tier 01
+  score: 1950
+- name: Sonarr - Remux Tier 02
+  score: 1900
+- name: Sonarr - Remux Tier 03
+  score: 1850
+# --- HQ Source Groups (English Web) ---
+- name: Sonarr - German Scene
+  score: 1700
+- name: Sonarr - WEB Tier 01
+  score: 1700
+- name: Sonarr - WEB Tier 02
+  score: 1650
+- name: Sonarr - WEB Tier 03
+  score: 1600
+# --- Audio Formats (Trash Guide Scores) ---
+- name: Sonarr - TrueHD ATMOS
+  score: 5000
+- name: Sonarr - DTS X
+  score: 4500
+- name: Sonarr - ATMOS (undefined)
+  score: 3000
+- name: Sonarr - DD+ ATMOS
+  score: 3000
+- name: Sonarr - TrueHD
+  score: 2750
+- name: Sonarr - DTS-HD MA
+  score: 2500
+- name: Sonarr - FLAC
+  score: 2250
+- name: Sonarr - PCM
+  score: 2250
+- name: Sonarr - DTS-HD HRA
+  score: 2000
+- name: Sonarr - DD+
+  score: 1750
+- name: Sonarr - DTS-ES
+  score: 1500
+- name: Sonarr - DTS
+  score: 1250
+- name: Sonarr - AAC
+  score: 1000
+- name: Sonarr - DD
+  score: 750
+# --- Resolution ---
+- name: Sonarr - 1080p
+  score: 50
+- name: Sonarr - 720p
+  score: 5
+# --- Misc Required ---
+- name: Sonarr - Repack3
+  score: 7
+- name: Sonarr - Repack2
+  score: 6
+- name: Sonarr - Repack-Proper
+  score: 5
+# --- HDR/DV blocked for HD profile ---
+- name: Sonarr - DV (w-o HDR fallback)
+  score: -10000
+- name: Sonarr - DV Boost
+  score: -10000
+- name: Sonarr - HDR
+  score: -10000
+- name: Sonarr - HDR10+ Boost
+  score: -10000
+# --- Unwanted ---
+- name: Sonarr - AV1
+  score: -35000
+- name: Sonarr - BR-DISK
+  score: -35000
+- name: Sonarr - Extras
+  score: -35000
+- name: Sonarr - German LQ
+  score: -35000
+- name: Sonarr - German LQ (release title)
+  score: -35000
+- name: Sonarr - German Microsized
+  score: -35000
+- name: Sonarr - Line-Mic Dubbed
+  score: -35000
+- name: Sonarr - LQ
+  score: -35000
+- name: Sonarr - LQ (Release Title)
+  score: -35000
+- name: Sonarr - Upscaled
+  score: -35000
+custom_formats_radarr: []
+custom_formats_sonarr: []
+qualities:
+- id: 8
+  name: Remux-1080p
+- id: 10
+  name: Bluray-1080p
+- id: 9
+  name: WEBDL-1080p
+- id: 11
+  name: WEBRip-1080p
+- id: 13
+  name: Bluray-720p
+- id: 14
+  name: WEBDL-720p
+- id: 15
+  name: WEBRip-720p
+upgrade_until:
+  id: 8
+  name: Remux-1080p
+  description: 1080p Blu-ray disc content remuxed into a playable file format
+language: german
